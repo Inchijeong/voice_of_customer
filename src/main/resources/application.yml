@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    platform: h2
+    driver-class-name: org.h2.Driver
+    url: "jdbc:h2:mem:h2_db;MODE=MYSQL;DB_CLOSE_DELAY=-1"
+#    url: "jdbc:h2:file:./h2_db;AUTO_SERVER=TRUE"
+    username: sa
+    sql-script-encoding: UTF-8
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database: h2
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+        format_sql: true
+#        use_sql_comments: true
+#logging.level.org.hibernate.type.descriptor.sql: trace
+server:
+  port: 8080

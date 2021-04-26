@@ -2,16 +2,6 @@
 
 
 
-
-
-
-
-## 테이블 스키마
-
-![voc](voc.png)
-
-
-
 ## API
 
 * VOC 목록 조회
@@ -59,3 +49,15 @@
 * H2
 * JPA
 * Gradle
+
+
+
+## 테이블 스키마
+
+![voc](voc.png)
+
+
+
+## 클래스 다이어그램(Entity)
+
+![uml](uml.jpg)

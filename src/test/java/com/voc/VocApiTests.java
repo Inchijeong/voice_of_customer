@@ -73,7 +73,7 @@ public class VocApiTests {
 	
 	@Test
 	@DisplayName("3. VOC 등록")
-	public void _registerVocApiTest() throws Exception {
+	public void _03_registerVocApiTest() throws Exception {
 		
 		Driver driver = Driver.builder()
 			.driverId(1l)
@@ -101,7 +101,7 @@ public class VocApiTests {
 	
 	@Test
 	@DisplayName("4. 패널티 등록")
-	public void _registerPenaltyApiTest() throws Exception {
+	public void _04_registerPenaltyApiTest() throws Exception {
 		
 		PenaltyDTO penaltyDTO = new PenaltyDTO();
 		penaltyDTO.setAmount(10000l);
@@ -123,7 +123,7 @@ public class VocApiTests {
 	
 	@Test
 	@DisplayName("5. 배송기사의 패널티 확인 여부 등록")
-	public void _updatePenaltyApiTest() throws Exception {
+	public void _05_updatePenaltyApiTest() throws Exception {
 		
 		PenaltyDTO penaltyDTO = new PenaltyDTO();
 		penaltyDTO.setAcceptYn(true);
@@ -133,7 +133,7 @@ public class VocApiTests {
 		String content = objectMapper.writeValueAsString(penaltyDTO);
 		
 		ResultActions result = mockMvc.perform(
-				put("/api/v1/voc/1/panelties")
+				put("/api/v1/voc/1/penalties")
 				.content(content)
 				.contentType(MediaType.APPLICATION_JSON)
 				.accept(MediaType.APPLICATION_JSON)
@@ -144,7 +144,7 @@ public class VocApiTests {
 	
 	@Test
 	@DisplayName("6. 배상 등록")
-	public void _registerReparationApiTest() throws Exception {
+	public void _06_registerReparationApiTest() throws Exception {
 		
 		Voc voc = Voc.builder()
 			.vocId(1l)
